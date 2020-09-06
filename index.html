@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Convertor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <center><h1 style="text-decoration: underline; margin-top: 3%;">Welcome</h1></center>
+  <hr>
+    <div id="full" style="margin-top: 5%; ">
+    <br>
+    <center>
+        <p><strong>What type of conversion do you want?</strong></p>
+        <input type="radio" name="color" id="rh" checked onclick="check(1)" value="rh">
+        <label for="rh">RGB to Hexadecimal</label>
+        <input type="radio" name="color" id="hr" onclick="check(2)" value="hr">
+        <label for="hr">Hexadecimal to RGB</label>
+    </center>
+    <br>
+   <div class="container" id="ini">
+        <div class="input-group mb-3" style="margin-bottom: 10px;">
+          <div class="input-group-prepend">
+            <span class="input-group-text">RGB</span>
+          </div>
+          <input name="red" type="number" class="form-control" placeholder="Red's weightage" required>
+          <input type="number" name="green" class="form-control" placeholder="Green's weightage" required>
+          <input type="number" name="blue" class="form-control" placeholder="Blue's weightage" required>
+          <button class="btn btn-primary" onclick="cli(1)">Submit</button>
+        </div>
+   </div>
+   <div class="container" id="sec" style="display: none;">
+    <div class="input-group mb-3" style="margin-bottom: 10px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Hexadecimal</span>
+      </div>
+      <input id="second" type="text" class="form-control" placeholder="Enter your color code">
+      <button class="btn btn-primary" onclick="cli(2)">Submit</button>    
+    </div>
+</div>
+   <center>
+    <h3 style="text-decoration: underline;">Result:</h3>
+    <strong>
+    <div id="result">
+        
+    </div>
+  </strong>
+</center>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="./script.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
